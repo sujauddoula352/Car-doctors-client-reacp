@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { AiOutlineArrowRight } from "react-icons/ai";
 
 const ServiceCard = ({ service }) => {
@@ -22,3 +23,6 @@ const ServiceCard = ({ service }) => {
 };
 
 export default ServiceCard;
+ServiceCard.prototype = {
+  service: PropTypes.string.isRequired,
+};

@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import loginImg from "../../assets/images/login/login.svg";
 
-const Login = () => {
-  const handleLogin = (event) => {
+const SignUp = () => {
+  const handleSignUp = (event) => {
     // event.preventDefault();
   };
   return (
@@ -12,8 +12,20 @@ const Login = () => {
           <img src={loginImg} alt="login image" />
         </div>
         <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-          <h1 className="text-4xl text-center top-2 font-bold">Login</h1>
-          <form onSubmit={handleLogin()} className="card-body">
+          <h1 className="text-4xl text-center top-2 font-bold">Sign Up</h1>
+          <form onSubmit={handleSignUp()} className="card-body">
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Name</span>
+              </label>
+              <input
+                type="name"
+                placeholder="name"
+                className="input input-bordered"
+                name="name"
+                required
+              />
+            </div>
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Email</span>
@@ -46,15 +58,15 @@ const Login = () => {
             <div className="form-control mt-6">
               <input
                 type="submit"
-                value="Login"
+                value="Sing UP"
                 className="btn btn-primary uppercase"
               />
             </div>
           </form>
           <p className="text-center mb-3">
-            Already have an account ?
-            <Link to="/signUp" className="text-orange-400 font-bold">
-              Sign Up
+            Have an account ?
+            <Link to="/login" className="text-orange-400 font-bold">
+              Login
             </Link>
           </p>
         </div>
@@ -63,4 +75,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default SignUp;
